@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Muzzammil Auzine — AI & Medical Imaging Researcher</title>
+<meta name="description" content="Muhammad Muzzammil Auzine — MPhil/PhD researcher in Artificial Intelligence for Medical Imaging, University of Mauritius. Deep learning, computer vision, explainable AI.">
+<meta property="og:title" content="Muhammad Muzzammil Auzine — AI Researcher">
+<meta property="og:description" content="MPhil/PhD researcher in AI for Medical Imaging · 12+ peer-reviewed publications · Best Paper Award">
+<meta property="og:url" content="https://mmuzzammil-auzine.github.io">
+<meta property="og:image" content="https://mmuzzammil-auzine.github.io/profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f9fc;
+    --surface:#ffffff;
+    --ink:#101b31;
+    --body:#3a4761;
+    --muted:#64748f;
+    --line:#e3e9f2;
+    --accent:#1d4ed8;
+    --accent-dark:#12308f;
+    --accent-soft:#e8eefc;
+    --navy:#0e1c3d;
+    --navy-2:#16295c;
+    --gold:#c2851a;
+    --gold-soft:#fdf3df;
+    --radius:16px;
+    --shadow:0 1px 2px rgba(16,27,49,.05),0 10px 30px rgba(16,27,49,.06);
+    --shadow-lg:0 4px 10px rgba(16,27,49,.08),0 24px 50px rgba(16,27,49,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--body);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;color:var(--ink);line-height:1.25}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+
+  /* ── Nav ── */
+  nav{position:sticky;top:0;z-index:100;background:rgba(14,28,61,.92);backdrop-filter:blur(12px)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .nav-name{font-weight:700;font-size:.95rem;letter-spacing:.03em;color:#fff}
+  .nav-name span{color:#8fb0f5}
+  .nav-links{display:flex;gap:26px;font-size:.86rem;font-weight:500}
+  .nav-links a{color:#c3cfe6;transition:.15s}
+  .nav-links a:hover{color:#fff;text-decoration:none}
+  @media(max-width:700px){.nav-links{display:none}}
+
+  /* ── Hero ── */
+  header{background:linear-gradient(150deg,var(--navy) 0%,var(--navy-2) 55%,#1c3a7e 100%);color:#fff;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(600px 300px at 85% 20%,rgba(99,141,235,.22),transparent 60%),
+    radial-gradient(500px 260px at 10% 90%,rgba(99,141,235,.12),transparent 60%)}
+  .hero{position:relative;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:84px 0 72px}
+  @media(max-width:760px){.hero{grid-template-columns:1fr;gap:36px;padding:56px 0 52px}.hero-photo{order:-1;justify-self:center}}
+  .kicker{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#9db9f2;border:1px solid rgba(157,185,242,.35);padding:6px 16px;border-radius:999px;margin-bottom:20px}
+  h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.01em}
+  .subtitle{font-size:1.08rem;color:#c9d5ec;max-width:560px;margin-bottom:26px}
+  .subtitle strong{color:#fff;font-weight:600}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .tag{font-size:.78rem;font-weight:500;color:#dbe5f8;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:5px 13px;border-radius:999px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:11px;transition:.15s}
+  .btn-primary{background:#fff;color:var(--navy)}
+  .btn-primary:hover{background:#e8eefc;text-decoration:none;transform:translateY(-1px)}
+  .btn-outline{color:#fff;border:1px solid rgba(255,255,255,.35)}
+  .btn-outline:hover{background:rgba(255,255,255,.1);text-decoration:none;transform:translateY(-1px)}
+
+  .hero-photo{position:relative;width:250px;height:250px;flex:none}
+  .hero-photo::after{content:"";position:absolute;inset:-14px;border:1px solid rgba(157,185,242,.35);border-radius:28px;transform:rotate(-3deg)}
+  .hero-photo img,.hero-photo .initials{width:100%;height:100%;object-fit:cover;object-position:center 22%;border-radius:24px;box-shadow:var(--shadow-lg);position:relative;z-index:1}
+  .hero-photo .initials{display:flex;align-items:center;justify-content:center;background:linear-gradient(140deg,#2c4b9e,#162a5e);font-family:'Source Serif 4',serif;font-size:4.2rem;font-weight:800;color:#9db9f2;letter-spacing:.04em}
+  @media(max-width:760px){.hero-photo{width:190px;height:190px}}
+
+  /* ── Stats bar ── */
+  .stats{position:relative;z-index:2;margin-top:-34px;margin-bottom:10px}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
+  .stat{padding:22px 12px;text-align:center;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:none}
+  .stat b{display:block;font-family:'Source Serif 4',serif;font-size:1.7rem;font-weight:800;color:var(--accent-dark)}
+  .stat span{font-size:.78rem;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+  @media(max-width:640px){.stats-inner{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:none}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+
+  /* ── Sections ── */
+  section{padding:64px 0}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .sec-num{font-family:'Source Serif 4',serif;font-size:.95rem;font-weight:700;color:var(--accent);letter-spacing:.05em}
+  .sec-title{font-size:1.7rem;font-weight:800}
+  .sec-sub{color:var(--muted);font-size:.94rem;max-width:640px;margin-bottom:30px}
+  .rule{width:52px;height:3px;background:linear-gradient(90deg,var(--accent),#7ba0ee);border-radius:2px;margin:16px 0 30px}
+
+  /* ── Timeline cards ── */
+  .timeline{position:relative;padding-left:26px}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent-soft),var(--line))}
+  .t-item{position:relative;margin-bottom:18px}
+  .t-item::before{content:"";position:absolute;left:-26px;top:26px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow);transition:.2s}
+  .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+  .card-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:4px}
+  .card h3{font-size:1.1rem;font-weight:700}
+  .card .org{color:var(--accent-dark);font-weight:600;font-size:.9rem}
+  .date{font-size:.78rem;font-weight:600;color:var(--accent-dark);background:var(--accent-soft);padding:5px 13px;border-radius:999px;white-space:nowrap;height:fit-content}
+  .proj{font-size:.89rem;color:var(--muted);font-style:italic;margin:6px 0 10px;padding-left:12px;border-left:3px solid var(--accent-soft)}
+  .card ul{margin:8px 0 0 18px;font-size:.92rem}
+  .card ul li{margin-bottom:6px}
+  .badge{display:inline-block;font-size:.73rem;font-weight:700;color:var(--gold);background:var(--gold-soft);border:1px solid #f0dcb2;padding:3px 11px;border-radius:999px;vertical-align:middle}
+  .edu-note{font-size:.87rem;color:var(--muted);margin-top:6px}
+
+  /* ── Publications ── */
+  .pub-group{margin-bottom:12px}
+  .pub-toggle{width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 24px;font:inherit;font-weight:700;font-size:1rem;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow);transition:.15s}
+  .pub-toggle:hover{border-color:var(--accent)}
+  .pub-toggle .count{font-size:.76rem;font-weight:700;color:var(--accent-dark);background:var(--accent-soft);padding:3px 12px;border-radius:999px;margin-left:10px}
+  .pub-toggle .chev{transition:.25s;color:var(--muted);margin-left:12px}
+  .pub-group.open .chev{transform:rotate(180deg)}
+  .pub-list{display:none;padding:8px 2px 16px}
+  .pub-group.open .pub-list{display:block}
+  .pub-item{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:15px 20px;margin-top:10px;font-size:.88rem}
+  .pub-item b{color:var(--ink)}
+  .pub-item .venue{color:var(--muted);font-style:italic}
+  .pub-item a{font-weight:600;font-size:.8rem;white-space:nowrap}
+
+  /* ── Skills ── */
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.skills-grid{grid-template-columns:1fr}}
+  .skill-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+  .skill-card h3{font-size:1rem;margin-bottom:4px}
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chip{font-size:.83rem;font-weight:500;background:var(--accent-soft);color:var(--accent-dark);padding:6px 14px;border-radius:8px}
+
+  /* ── Contact ── */
+  #contact{background:linear-gradient(150deg,var(--navy),var(--navy-2));color:#c9d5ec}
+  #contact .sec-title,#contact h3{color:#fff}
+  #contact .sec-num{color:#9db9f2}
+  #contact .rule{background:linear-gradient(90deg,#9db9f2,#5b82d8)}
+  .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
+  @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+  .contact-lead{font-size:1rem;max-width:460px}
+  .contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:26px 28px}
+  .contact-row{display:flex;align-items:center;gap:13px;padding:9px 0;font-size:.93rem}
+  .contact-row a{color:#dbe5f8;font-weight:500}
+  .contact-row .ico{width:36px;height:36px;flex:none;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);color:#9db9f2;border-radius:10px}
+  .private{display:none}
+  .contact-card.show-private .private{display:flex}
+  .reveal-btn{margin-top:16px;font:inherit;font-size:.84rem;font-weight:600;color:#9db9f2;background:none;border:1px dashed rgba(157,185,242,.5);border-radius:9px;padding:10px 18px;cursor:pointer;transition:.15s}
+  .reveal-btn:hover{background:rgba(255,255,255,.07)}
+
+  footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:26px 0;text-align:center;font-size:.8rem;color:#8494b8}
+
+  /* ── Reveal on scroll ── */
+  .fade{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .fade.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+  svg{flex:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <span class="nav-name">M. M. <span>AUZINE</span></span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="about">
+  <div class="wrap hero">
+    <div>
+      <span class="kicker">AI · Computer Vision · Medical Imaging</span>
+      <h1>Muhammad Muzzammil Auzine</h1>
+      <p class="subtitle">MPhil/PhD researcher in <strong>Artificial Intelligence in Medical Imaging</strong> at the University of Mauritius, working on colorectal cancer prediction with deep neural networks and explainable AI. Mechatronics engineer by training.</p>
+      <div class="hero-tags">
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Explainable AI</span>
+        <span class="tag">Vision Transformers</span>
+        <span class="tag">Medical Image Analysis</span>
+        <span class="tag">Transfer Learning</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-outline" href="https://scholar.google.com/citations?user=FGUu4wUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="btn btn-outline" href="https://orcid.org/0000-0002-6616-7108" target="_blank" rel="noopener">ORCID ↗</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/muzzammil-auzine/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="profile.jpg" alt="Muhammad Muzzammil Auzine" onerror="this.outerHTML='<div class=&quot;initials&quot;>MA</div>'">
+    </div>
+  </div>
+</header>
+
+<div class="wrap stats">
+  <div class="stats-inner">
+    <div class="stat"><b>12+</b><span>Publications</span></div>
+    <div class="stat"><b>4+</b><span>Years in Research</span></div>
+    <div class="stat"><b>3</b><span>Funded Projects</span></div>
+    <div class="stat"><b>1</b><span>Best Paper Award</span></div>
+  </div>
+</div>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Research Experience</h2></div>
+    <div class="rule"></div>
+
+    <div class="timeline">
+      <div class="t-item fade">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Research Assistant</h3><span class="org">University of Mauritius</span></div>
+            <span class="date">Jun 2026 – Present</span>
+          </div>
+          <p class="proj">Development of a sustainable and integrated e-waste management strategy using Industry 4.0, contributing to the circular economy — the case of Mauritius.</p>
+          <ul><li>Collaborating with a team of professors on a funded project applying Industry 4.0 technologies to e-waste management and the circular economy in Mauritius.</li></ul>
+        </div>
+      </div>
+
+      <div class="t-item fade">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Research Assistant</h3><span class="org">University of Mauritius</span></div>
+            <span class="date">Jan 2026 – Present</span>
+          </div>
+          <p class="proj">Decision-making support for diabetic retinopathy in Mauritius through deep and transfer learning (Phase 2 — Computing).</p>
+          <ul>
+            <li>Analysing and pre-processing a locally curated Mauritian diabetic retinopathy dataset.</li>
+            <li>Developing and training custom deep learning models tailored for diabetic retinopathy.</li>
+            <li>Validating models on annotated datasets and evaluating performance with key metrics.</li>
+            <li>Drafting progress reports and contributing to scientific publications and presentations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item fade">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Research Assistant</h3><span class="org">University of Mauritius</span></div>
+            <span class="date">Feb 2022 – Feb 2025</span>
+          </div>
+          <p class="proj">Early detection of gastric cancer using deep learning.</p>
+          <ul>
+            <li>Comprehensive literature review on EGC diagnostics, deep learning architectures, and Explainable AI (XAI).</li>
+            <li>Implemented transfer learning with pre-trained models to optimise feature extraction and classification accuracy.</li>
+            <li>Developed and trained a custom deep learning model for early gastric cancer detection.</li>
+            <li>Validated models on annotated datasets; contributed to publications and presentations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item fade">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Engineer Intern</h3><span class="org">Manser Saxon Contracting Ltd — MS Plumbing Division</span></div>
+            <span class="date">Jan–Mar & Jul–Sep 2020</span>
+          </div>
+          <ul><li>Worked within a team designing public health installations, swimming pool installations, and firefighting/fire-extinguishing systems under senior engineer supervision.</li></ul>
+        </div>
+      </div>
+
+      <div class="t-item fade">
+        <div class="card">
+          <div class="card-head">
+            <div><h3>Assistant Treasurer</h3><span class="org">Society of Statistics and Data Analytics</span></div>
+            <span class="date">May 2024 – Present</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Education</h2></div>
+    <div class="rule"></div>
+
+    <div class="card fade" style="background:var(--bg);margin-bottom:16px">
+      <div class="card-head">
+        <div><h3>MPhil/PhD, Artificial Intelligence in Medical Imaging</h3><span class="org">University of Mauritius — Faculty of ICDT</span></div>
+        <span class="date">Aug 2022 – Present</span>
+      </div>
+      <p class="edu-note"><em>Research:</em> Prediction of Colorectal Cancer Using Deep Neural Networks and Explainable Artificial Intelligence.<br>MPhil/PhD Scholarship from the Higher Education Commission of Mauritius.</p>
+    </div>
+
+    <div class="card fade" style="background:var(--bg);margin-bottom:16px">
+      <div class="card-head">
+        <div><h3>Erasmus+ Exchange — Faculty of Engineering</h3><span class="org">South-West University "Neofit Rilski", Bulgaria</span></div>
+        <span class="date">Feb – Jun 2025</span>
+      </div>
+      <p class="edu-note">Visiting doctoral researcher under the same MPhil/PhD research programme.</p>
+    </div>
+
+    <div class="card fade" style="background:var(--bg);margin-bottom:16px">
+      <div class="card-head">
+        <div><h3>BEng (Hons) Mechatronics Engineering</h3><span class="org">University of Mauritius — Faculty of Engineering</span></div>
+        <span class="date">Aug 2017 – Oct 2021</span>
+      </div>
+      <p class="edu-note"><em>Thesis:</em> Design of an integrated monitoring and control system to promote home-based farming using smart farming technologies.</p>
+    </div>
+
+    <div class="card fade" style="background:var(--bg)">
+      <div class="card-head">
+        <div><h3>Cambridge A-Levels & O-Levels</h3><span class="org">Piton State College</span></div>
+        <span class="date">2013 – 2016</span>
+      </div>
+      <p class="edu-note">A-Levels: Computer Science, Mathematics, Physics, French, General Paper.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Publications</h2></div>
+    <p class="sec-sub">Peer-reviewed journal articles, international conference papers, and conference abstracts. &nbsp;<span class="badge">★ Best Paper Award — WiDS-PSU 2023</span></p>
+
+    <div class="pub-group open fade">
+      <button class="pub-toggle" onclick="this.parentElement.classList.toggle('open')">
+        <span>Journal Articles <span class="count">5</span></span><span class="chev">▾</span>
+      </button>
+      <div class="pub-list">
+        <div class="pub-item">P. Bissoonauth-Daiboo, <b>M. M. Auzine</b>, M. Inshal, F. Shannag, T. Saba, X. Gao, M. Heenaye-Mamode Khan (2025). "Exploring Vision Transformers and Explainable AI for Enhanced Artefact Classification in Esophageal Endoscopic Images." <span class="venue">IEEE Access, 13, 176221–176244.</span> <a href="https://doi.org/10.1109/ACCESS.2025.3616796" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item">D. Bootun, <b>M. M. Auzine</b>, N. Ayesha, S. Idris, T. Saba, M. Heenaye-Mamode Khan (2025). "ADAMAEX — Alzheimer's disease classification via attention-enhanced autoencoders and XAI." <span class="venue">Egyptian Informatics Journal, 30, 100688.</span> <a href="https://doi.org/10.1016/j.eij.2025.100688" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item">M. Heenaye-Mamode Khan, P. Reesaul, <b>M. M. Auzine</b>, A. Taylor (2024). "Detection of Alzheimer's disease using pre-trained deep learning models through transfer learning: a review." <span class="venue">Artificial Intelligence Review, 57(10), 275.</span> <a href="https://doi.org/10.1007/s10462-024-10914-z" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item"><b>M. M. Auzine</b>, M. Heenaye-Mamode Khan, S. Baichoo, N. Gooda Sahib, P. Bissoonauth-Daiboo, X. Gao, Z. Heetun (2024). "Development of an Ensemble CNN Model with Explainable AI for the Classification of Gastrointestinal Cancer." <span class="venue">PLoS ONE, 19(6), e0305628.</span> <a href="https://doi.org/10.1371/journal.pone.0305628" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item">M. Heenaye-Mamode Khan, <b>M. M. Auzine</b>, P. Bissoonauth-Daiboo, N. Gooda Sahib, S. Baichoo, X. Gao, S. Sardar, F. Sapundzhi. "Advancing Gastric Cancer Diagnosis with Deep Learning: Trends, Challenges and Future Prospects." <span class="venue">Intelligent Systems with Applications — manuscript submitted.</span></div>
+      </div>
+    </div>
+
+    <div class="pub-group fade">
+      <button class="pub-toggle" onclick="this.parentElement.classList.toggle('open')">
+        <span>International Conference Papers <span class="count">7</span></span><span class="chev">▾</span>
+      </button>
+      <div class="pub-list">
+        <div class="pub-item">K. Jhumka, <b>M. M. Auzine</b>, M. Heenaye-Mamode Khan, M. S. Casseem, S. A. Fedally, Z. Mungloo-Dilmohamud (2024). "Explainable Chronic Kidney Disease (CKD) Prediction using Deep Learning and Shapley Additive Explanations (SHAP)." <span class="venue">ICAAI '23, ACM, 29–33.</span> <a href="https://doi.org/10.1145/3633598.3633604" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item">P. Bissoonauth-Daiboo, M. Heenaye-Mamode Khan, <b>M. M. Auzine</b>, X. Gao, S. Baichoo, Z. Heetun (2024). "Endoscopic Image Classification using Vision Transformers." <span class="venue">ICAAI '23, ACM, 128–132.</span> <a href="https://doi.org/10.1145/3633598.3633623" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item"><b>M. M. Auzine</b>, M. Heenaye-Mamode Khan, S. Baichoo, P. Bissoonauth-Daiboo, Z. Heetun, X. Gao (2024). "Explainable AI for Colorectal Lesion Classification Using Deep Learning Models with Attention Mechanism." <span class="venue">ICAAI '23, ACM, 117–121.</span> <a href="https://doi.org/10.1145/3633598.3633617" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item"><b>M. M. Auzine</b>, M. Heenaye-Mamode Khan, S. Baichoo, N. Gooda Sahib, X. Gao, P. Bissoonauth-Daiboo (2023). "Classification of Gastrointestinal Cancer through Explainable AI and Ensemble Learning." <span class="venue">WiDS-PSU 2023, Riyadh, 195–200.</span> <span class="badge">★ Best Paper</span> <a href="https://doi.org/10.1109/WiDS-PSU57071.2023.00048" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item"><b>M. M. Auzine</b>, M. Heenaye-Mamode Khan, S. Baichoo, N. Gooda Sahib, X. Gao, P. Bissoonauth-Daiboo (2022). "Endoscopic Image Analysis Using Deep Convolutional GAN and Traditional Data Augmentation." <span class="venue">ICECCME 2022, Maldives, 1–6.</span> <a href="https://doi.org/10.1109/ICECCME55909.2022.9988503" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item"><b>M. M. Auzine</b>, P. Bissoonauth-Daiboo, M. Heenaye-Mamode Khan, S. Baichoo, X. Gao, N. Gooda Sahib (2022). "Classification of artefacts in endoscopic images using deep neural network." <span class="venue">NextComp 2022, 1–5.</span> <a href="https://doi.org/10.1109/NextComp55567.2022.9932202" target="_blank" rel="noopener">DOI ↗</a></div>
+        <div class="pub-item">K. Jhumka, <b>M. M. Auzine</b>, M. S. Casseem, M. Heenaye-Mamode Khan, Z. Mungloo-Dilmohamud (2022). "Chronic Kidney Disease Prediction using Deep Neural Network." <span class="venue">NextComp 2022, 1–5.</span> <a href="https://doi.org/10.1109/NextComp55567.2022.9932200" target="_blank" rel="noopener">DOI ↗</a></div>
+      </div>
+    </div>
+
+    <div class="pub-group fade">
+      <button class="pub-toggle" onclick="this.parentElement.classList.toggle('open')">
+        <span>Conference Abstracts <span class="count">8</span></span><span class="chev">▾</span>
+      </button>
+      <div class="pub-list">
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "From CNNs to Transformers: Enhancing Colorectal Cancer Diagnosis with Attention Mechanism." <span class="venue">Doctoral Consortium, NextComp 2024.</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "Explainable AI for Colorectal Lesion Classification using Deep Learning Model with Attention Mechanism." <span class="venue">1st UoM Research & Innovation Week, Nov–Dec 2023.</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "Transforming Colorectal Cancer Lesion Classification: Vision Transformer vs CNN." <span class="venue">1st UoM Research & Innovation Week, 2023 (SO-178).</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "XAI and Deep Learning based Colorectal Cancer Detection." <span class="venue">UoM Doctoral Consortium 2023, Flic en Flac.</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "Prediction of Colorectal Cancer Using Deep Neural Network and Explainable Artificial Intelligence." <span class="venue">2nd Doctoral Colloquium, UoM Doctoral School & UKZN, 2023.</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "XAI and Deep Learning based Colorectal Cancer Detection." <span class="venue">UoM 13th Research Week 2022 (O-7871).</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "A Situational Assessment of the Colorectal Screening at the A. G. Jeetoo Hospital in Mauritius." <span class="venue">UoM 13th Research Week 2022 (O-7379).</span></div>
+        <div class="pub-item"><b>M. M. Auzine</b> et al. "Prediction of Colorectal Cancer Using Deep Neural Network and Explainable Artificial Intelligence." <span class="venue">Doctoral Consortium, NextComp 2022.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Skills</h2></div>
+    <div class="rule"></div>
+    <div class="skills-grid">
+      <div class="skill-card fade">
+        <h3>Programming & AI</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">MATLAB</span><span class="chip">R</span><span class="chip">VBA</span><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Explainable AI</span>
+        </div>
+      </div>
+      <div class="skill-card fade">
+        <h3>Engineering & Tools</h3>
+        <div class="chip-row">
+          <span class="chip">Arduino</span><span class="chip">Raspberry Pi</span><span class="chip">AutoCAD</span><span class="chip">SolidWorks</span><span class="chip">RSLogix 500 (PLC)</span><span class="chip">SPSS</span><span class="chip">Microsoft Office</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Contact</h2></div>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div>
+        <h3 style="font-size:1.4rem;margin-bottom:12px;font-family:'Source Serif 4',serif">Let's collaborate.</h3>
+        <p class="contact-lead">I'm open to research collaborations, publications, and opportunities in AI, computer vision, and medical imaging. Feel free to reach out.</p>
+      </div>
+      <div class="contact-card" id="contactCard">
+        <div class="contact-row">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <a href="mailto:mmuzzammil.auzine@gmail.com">mmuzzammil.auzine@gmail.com</a>
+        </div>
+        <div class="contact-row">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+          <a href="https://www.linkedin.com/in/muzzammil-auzine/" target="_blank" rel="noopener">linkedin.com/in/muzzammil-auzine</a>
+        </div>
+        <div class="contact-row">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/></svg></span>
+          <a href="https://scholar.google.com/citations?user=FGUu4wUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>
+        </div>
+        <div class="contact-row">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 8v8M8 5.5v.5M12 8v8m0-8h2.5a4 4 0 0 1 0 8H12"/></svg></span>
+          <a href="https://orcid.org/0000-0002-6616-7108" target="_blank" rel="noopener">orcid.org/0000-0002-6616-7108</a>
+        </div>
+        <div class="contact-row private">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <a href="tel:+23057597067">+230 5759 7067</a>
+        </div>
+        <div class="contact-row private">
+          <span class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span>Royal Road 8th Mile, Auzim Lane, Triolet 21503, Republic of Mauritius</span>
+        </div>
+        <button class="reveal-btn" id="revealBtn" onclick="togglePrivate()">Show phone &amp; address</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Muhammad Muzzammil Auzine · AI & Medical Imaging Researcher · Mauritius</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function togglePrivate(){
+    const card = document.getElementById('contactCard');
+    const btn = document.getElementById('revealBtn');
+    card.classList.toggle('show-private');
+    btn.textContent = card.classList.contains('show-private') ? 'Hide phone & address' : 'Show phone & address';
+  }
+
+  // Reveal-on-scroll animation
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('vis'); obs.unobserve(e.target); } });
+  }, {threshold:.08});
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
